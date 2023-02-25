@@ -9,6 +9,7 @@
 --color-customers: #8E8F99;
 --line-height-h-text: 1.2;
 --line-height-p-text: 1.5;
+--time-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body { 
@@ -43,11 +44,10 @@ ul {
 
 .header-link {
     color: var(--color-text-primary);
-    text-decoration: none;
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 16px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     line-height: var(--line-height-p-text);
     padding: 24px 0; 
     margin: 0;
@@ -76,7 +76,7 @@ ul {
     text-decoration: none;
     font-style: normal;
     font-size: 16px;
-    letter-spacing: 0.03em; 
+    letter-spacing: 0.02em; 
     line-height: var(--line-height-p-text)  
 }
 
@@ -124,6 +124,7 @@ ul {
     border: none;
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.04em;
 }
 
 .button:hover,
@@ -161,7 +162,8 @@ ul {
     font-weight: 500;
     font-size: 20px;
     line-height: var(--line-height-h-text);
-    margin: 8px 0;
+    margin: 0;
+    margin-bottom: 8px;
 }
 
 .descr {
@@ -244,10 +246,6 @@ ul {
     border: 1px solid var(--color-footer);
     border-radius: 4px; 
     padding:12px 24px; 
-}
-
-.link {
-    text-decoration: none;
 }
 
 .filter-button:hover,
@@ -374,12 +372,10 @@ ul {
     margin-right: 0;
 }
 
-.flex-element .head {
-    margin-bottom: 8px;
-}
-
 img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .border-link {
@@ -405,6 +401,7 @@ img {
     height: 112px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 8px;
 }
 
 .social-list {
@@ -452,6 +449,38 @@ img {
 } 
 
 /* Homework 5 */
+
+.link-portfolio {
+    text-decoration: none;
+    display: block;
+}
+
+.img-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    color: var(--button-filter-bcg);
+    background-color: var(--color-brand);
+    position: absolute;
+    padding: 40px 32px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    overflow: auto;
+    transform: translate(0, 100%);
+    transition: transform var(--time-cubic);
+}
+
+.link-portfolio:hover .overlay,
+.link-portfolio:focus .overlay {
+    transform: translate(0, 0);
+    transition: transform var(--time-cubic);
+}
+
 
 
 
