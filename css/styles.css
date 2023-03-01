@@ -263,7 +263,7 @@ ul {
     border: 1px solid var(--color-footer);
     border-radius: 4px; 
     padding:12px 24px; 
-    transition: background-color var(--timing-cubic), border var(--timing-cubic), color var(--timing-cubic), box-shadow var(--timing-cubic), border-color var(--timing-cubic);
+    transition: background-color var(--timing-cubic), border var(--timing-cubic), color var(--timing-cubic), box-shadow var(--timing-cubic);
 }
 
 .filter-button:hover,
@@ -460,7 +460,7 @@ img {
     fill: var(--color-customers);
     border: 1px solid var(--color-customers);
     border-radius: 4px;
-    transition: fill var(--timing-cubic), border var(--timing-cubic), border-color var(--timing-cubic);
+    transition: fill var(--timing-cubic), border var(--timing-cubic);
 }
 
 .link-customers:hover,
